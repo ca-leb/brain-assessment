@@ -22,7 +22,7 @@ jupyter notebook
 
 I would deploy this in the cloud with AWS S3 and AWS Lambda, a fully managed service that runs code without provisioning or managing servers. It would automate the generation of CSV data files on the cloud, instead of locally (Jupyter Notebook).
 
-Firstly, I would create and configure a new AWS Lambda function, using the Python script from the `main.ipynb` file, that processes the data and generates the CSV data files. I would also configure the function input and output by specifying the input and output format for your Lambda function. For example, the input could be a message containing any necessary parameters or settings for the function, and the output could be a response indicating whether the function completed successfully and the filenames of the generated CSV files. 
+Firstly, I would create and configure a new AWS Lambda function, using the Python script from the `main.ipynb` file, that processes the data and generates the CSV data files. I would also configure the function input and output by specifying the input and output format for the Lambda function. For example, the input could be a message containing any necessary parameters or settings for the function, and the output could be a response indicating whether the function completed successfully and the filenames of the generated CSV files. 
 
 Next, I would create and configure the S3 buckets. The new S3 buckets will be used to store the input data files, and the generated CSV data files respectively. The input data files would then be uploaded to the S3 bucket using the AWS Management Console or the AWS CLI. 
 
@@ -32,7 +32,7 @@ Finally, the Lambda function can be triggered using an event trigger, such as wh
 
 ![alt text](https://i.ibb.co/JtpJd75/Untitled-drawio.png)
 
-In this architecture, the source data files are uploaded to an S3 bucket, and the AWS Lambda function is triggered by an event, such as an object uploaded to the Source S3 bucket. The Lambda function generates the CSV data files based on your Python script and saves them to the Destination S3 bucket. The entire process can be monitored using the AWS Management Console.
+In this architecture, the source data files are uploaded to an S3 bucket, and the AWS Lambda function is triggered by an event, such as an object uploaded to the Source S3 bucket. The Lambda function generates the CSV data files based on the Python script and saves them to the Destination S3 bucket. The entire process can be monitored using the AWS Management Console.
 
 ## Decisions and Considerations
 
