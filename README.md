@@ -1,5 +1,7 @@
 # Take-home Assignment
 
+Low Ye Yang, Caleb
+
 ## Getting Started
 
 ### Dependencies
