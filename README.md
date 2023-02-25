@@ -24,7 +24,7 @@ I would deploy this in the cloud with AWS S3 and AWS Lambda, a fully managed ser
 
 Firstly, I would create and configure the S3 buckets. The new S3 buckets will be used to store the input data files, and the generated CSV data files respectively. The input data files would then be uploaded to the S3 bucket using the AWS Management Console or the AWS CLI. 
 
-Next, I would create and configure a new AWS Lambda function, using the Python script from the `main.ipynb` file, that processes the data and generates the CSV data files. I would also configure the function input and output by specifying the input and output format for the Lambda function. The input file would be the raw json file from the source S3 bucket. The lambda function would take the file and process it and output the formated csv file into the destination S3 bucket.
+Next, I would create and configure a new AWS Lambda function, using the Python script from the `main.ipynb` file, that processes the data and generates the CSV data files. I would also configure the function input and output by specifying the input and output format for the Lambda function. The input file would be the raw json file from the source S3 bucket. The lambda function would take the file and process it and output the formatted csv file into the destination S3 bucket.
 
 Finally, the Lambda function can be triggered using an event trigger, such as when a new data file is uploaded to the S3 bucket. The Lambda function will then generate the CSV data files based on the Python script and save them to the S3 bucket.
 
